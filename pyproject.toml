@@ -1,0 +1,32 @@
+[project]
+name = "anymcp-tool"
+version = "0.1.0"
+description = "AI self-creating MCP tool system"
+readme = "README.md"
+authors = [
+    { name = "xz-dev", email = "xiangzhedev@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "behave>=1.2.6",
+    "aiofiles>=24.1.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "ruff>=0.5.0",
+]
+
+[project.scripts]
+anymcp-tool = "anymcp:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["anymcp"]
